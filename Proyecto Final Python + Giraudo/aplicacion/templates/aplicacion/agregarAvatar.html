@@ -1,0 +1,40 @@
+{% extends 'aplicacion/1home.html' %}
+
+
+{% block titulo %}
+    <h1 class="mb-5">Avatar</h1>
+{% endblock titulo %}
+
+<!--------------------------------------------------------------------------------------------------------------------->
+{% block busqueda %}
+
+{% endblock busqueda %}
+
+{% block contenido %}
+
+{% endblock contenido %}
+
+{% block inicio %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card-body text-center ">
+
+                <form action="" method="post" enctype="multipart/form-data">
+                    
+                    {% csrf_token %} 
+                    <h2 class="fs-5 fw-bold">
+                    <table>
+                        {{ form.as_table }}
+                    </table></h2>            
+
+                <h2 class="fs-5 fw-bold"><input class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4" 
+                type="submit" value="Editar avatar"></h2>
+                
+                </form>    
+            </div>
+        </div>
+    </div>
+</div> 
+{% endblock inicio %}
